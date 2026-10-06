@@ -573,9 +573,9 @@ The chosen version will be downloaded by Garden and used to define `JAVA_HOME` e
 
 To use an arbitrary JDK distribution, please use the `jdkPath` configuration option.
 
-| Type     | Allowed Values        | Default | Required |
-| -------- | --------------------- | ------- | -------- |
-| `number` | 8, 11, 13, 17, 21, 23 | `11`    | Yes      |
+| Type     | Allowed Values                | Default | Required |
+| -------- |-------------------------------| ------- | -------- |
+| `number` | 8, 11, 13, 17, 21, 23, 25, 27 | `11`    | Yes      |
 
 ### `spec.jdkPath`
 
