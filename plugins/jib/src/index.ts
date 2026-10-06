@@ -60,7 +60,7 @@ const jibBuildSchemaKeys = () => ({
   jdkVersion: joi
     .number()
     .integer()
-    .valid(8, 11, 13, 17, 21, 23)
+    .valid(8, 11, 13, 17, 21, 23, 25, 27)
     .default(11)
     .description(
       dedent`

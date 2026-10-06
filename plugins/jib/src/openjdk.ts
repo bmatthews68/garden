@@ -260,6 +260,58 @@ const jdk23Version: JdkVersion = {
   },
 }
 
+const jdk25VersionName = "jdk-25.0.4.1+1"
+const jdk25Version: JdkVersion = {
+  lookupName: "openjdk-25",
+  description: `The OpenJDK 25 library, ${jdk25VersionName}`,
+  baseUrl: "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/",
+  versionName: jdk25VersionName,
+  mac_amd64: {
+    filename: "OpenJDK25U-jdk_x64_mac_hotspot_25.0.4.1_1.tar.gz",
+    sha256: "e6229d9504f7922053ab31821b9e6bee8761daf7b026a3476d1a027563009880",
+  },
+  mac_arm64: {
+    filename: "OpenJDK25U-jdk_aarch64_mac_hotspot_25.0.4.1_1.tar.gz",
+    sha256: "61979887f7506a24a57439ff99adb8b3a7fc89977d9cfe3b8984f58a981b7b9d",
+  },
+  linux_amd64: {
+    filename: "OpenJDK25U-jdk_x64_linux_hotspot_25.0.4.1_1.tar.gz",
+    sha256: "dbb698396d478e7fa2b1e50f4103324b2a99b90569ee27c33f2261f9215cf41e",
+  },
+  linux_arm64: {
+    filename: "OpenJDK25U-jdk_aarch64_linux_hotspot_25.0.4.1_1.tar.gz",
+    sha256: "69df11a02cfa3ef7d7ca645e03edce6778ec090e100f6ae2b42097865730ac52",
+  },
+  windows: {
+    filename: "OpenJDK25U-jdk_x64_windows_hotspot_25.0.4.1_1.zip",
+    sha256: "00c847d804f4a78e9f04f2683faf14fed898535b177b7fc704486cb0284e9283",
+  },
+}
+
+const jdk27VersionName = "jdk-27+35"
+const jdk27Version: JdkVersion = {
+  lookupName: "openjdk-27",
+  description: `The OpenJDK 27 library, ${jdk27VersionName}`,
+  baseUrl: "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B35/",
+  versionName: jdk27VersionName,
+  mac_arm64: {
+    filename: "OpenJDK27U-jdk_aarch64_mac_hotspot_27_35.tar.gz",
+    sha256: "a59626c926f0146a286cb535fc9a46499d6c46b3d79ae72168bbf18438fe49dd",
+  },
+  linux_amd64: {
+    filename: "OpenJDK27U-jdk_x64_linux_hotspot_27_35.tar.gz",
+    sha256: "1cf69a4848ffb728b3b260dfd45206a51566ab571a02a30092271d4c580bccbc",
+  },
+  linux_arm64: {
+    filename: "OpenJDK27U-jdk_aarch64_linux_hotspot_27_35.tar.gz",
+    sha256: "e4ec5c7276290c7bde0baecba9a29be4962f5388684296406a9799d465936087",
+  },
+  windows: {
+    filename: "OpenJDK27U-jdk_x64_windows_hotspot_27_35.zip",
+    sha256: "2031c9c5c624737ed29a0624caaf5bcc25e74235834c28b4bfa88f7ba7a40e4a",
+  },
+}
+
 export const openJdkSpecs: PluginToolSpec[] = [
   openJdkSpec(jdk8Version),
   openJdkSpec(jdk11Version),
@@ -267,4 +319,6 @@ export const openJdkSpecs: PluginToolSpec[] = [
   openJdkSpec(jdk17Version),
   openJdkSpec(jdk21Version),
   openJdkSpec(jdk23Version),
+  openJdkSpec(jdk25Version),
+  openJdkSpec(jdk27Version),
 ]
